@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        Array.prototype.forEach.call(inputs, function (input, index) {
+        Array.prototype.forEach.call(inputs, (input, index) => {
             if (input.name !== "email") {
                 if (input.value === "" || input.value == null) {
                     isValid = false;
@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             } else if (input.name === "email") {
                 if (validateEmail(email.value) || email.value == null) {
+                    isValid = false;
                     input.classList.add("input__failed");
                     input.value = "";
                     input.placeholder = "email@example/com";
@@ -43,6 +44,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+        if (isValid) {
+            Array.prototype.forEach.call(inputs, (input, index) => {
+                input.value = "";
+            });
+        }
     });
 
     Array.prototype.forEach.call(inputs, (input) => {
