@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Frontend Mentor | Intro component with sign up form</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <div class="heading">
+                    <div class="heading_body">
+                        <h2>Learn to code by watching others</h2>
+                        <p>
+                            See how experienced developers solve problems in
+                            real-time. Watching scripted tutorials is great, but
+                            understanding how developers think is invaluable.
+                        </p>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main__container">
+                        <div class="main__heading">
+                            <h6>
+                                <strong>Try it free 7 days</strong> then $20/mo.
+                                thereafter
+                            </h6>
+                        </div>
+                        <div class="form__container">
+                            <form
+                                action="/"
+                                method="get"
+                                class="form__body"
+                                id="form"
+                            >
+                                <label class="label" id="firstNameIcon">
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        placeholder="First Name"
+                                        name="firstName"
+                                        id="firstName"
+                                    />
+                                </label>
+                                <p class="input__error" id="firstNameError">
+                                    First Name cannot be empty
+                                </p>
+                                <label class="label" id="lastNameIcon">
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        placeholder="Last Name"
+                                        name="LastName"
+                                        id="lastName"
+                                    />
+                                </label>
+                                <p class="input__error" id="lastNameError">
+                                    Last Name cannot be empty
+                                </p>
+                                <label class="label" id="emailIcon">
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        placeholder="Email Address"
+                                        name="email"
+                                        id="email"
+                                    />
+                                </label>
+                                <p class="input__error" id="emailError">
+                                    Looks like this is not an email
+                                </p>
+                                <label class="label" id="passwordIcon">
+                                    <input
+                                        class="input"
+                                        type="password"
+                                        placeholder="Password"
+                                        name="password"
+                                        id="password"
+                                    />
+                                </label>
+                                <p class="input__error" id="passwordError">
+                                    Password cannot be empty
+                                </p>
+                                <button type="submit">
+                                    Claim your free trial
+                                </button>
+                            </form>
+                            <p>
+                                By clicking the button, you are agreeing our
+                                <span>Terms and Services</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p class="attribution">
+                    Challenge by
+                    <a
+                        href="https://www.frontendmentor.io?ref=challenge"
+                        target="_blank"
+                        >Frontend Mentor</a
+                    >. Coded by <a href="#">Nikita Pelenskyi</a>.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
