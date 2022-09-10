@@ -306,10 +306,6 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-    .wrapper {
-        background-image: url("./images/bg-intro-mobile.png");
-    }
-
     .content {
         max-width: 700px;
         padding: 100px 25px 25px 25px;
@@ -356,5 +352,11 @@ footer {
         background-color: #ffffff;
 
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .wrapper {
+        background-image: url("./images/bg-intro-mobile.png");
     }
 }
