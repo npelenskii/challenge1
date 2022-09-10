@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+
         if (isValid) {
             Array.prototype.forEach.call(inputs, (input, index) => {
                 input.value = "";
