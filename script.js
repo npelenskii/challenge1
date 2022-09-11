@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let isValid = true;
 
     const validateEmail = (email) => {
-        return !String(email)
+        return String(email)
             .toLowerCase()
             .match(
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -25,20 +25,12 @@ window.addEventListener("DOMContentLoaded", () => {
                     labels[index].classList.add("error__label");
                     errorText[index].classList.add("show");
                 }
-            } else if (input.name === "email") {
-                if (validateEmail(email.value) || email.value == null) {
+            } else {
+                if (!validateEmail(email.value) || email.value == null) {
                     isValid = false;
                     input.classList.add("input__failed");
                     input.value = "";
                     input.placeholder = "email@example/com";
-                    labels[index].classList.add("error__label");
-                    errorText[index].classList.add("show");
-                }
-            } else {
-                if (input.value === "" || input.value == null) {
-                    isValid = false;
-                    input.classList.add("input__failed");
-                    input.placeholder = "";
                     labels[index].classList.add("error__label");
                     errorText[index].classList.add("show");
                 }
@@ -62,14 +54,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
                     if (input.name === "firstName") {
                         input.placeholder = "First Name";
-                    }
-                    if (input.name === "lastName") {
+                    } else if (input.name === "lastName") {
                         input.placeholder = "Last Name";
-                    }
-                    if (input.name === "email") {
+                    } else if (input.name === "email") {
                         input.placeholder = "Email Address";
-                    }
-                    if (input.name === "password") {
+                    } else if (input.name === "password") {
                         input.placeholder = "Password";
                     }
                 });
